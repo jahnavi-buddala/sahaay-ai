@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    /* Palette from user uploaded palette: #2F4F4F, #778899, #F5F5DC, #ADD8E6, #87CEEB */
+    --slate-dark: #2F4F4F;       /* Primary Dark Slate Petrol */
+    --slate-muted: #778899;      /* Secondary Cool Slate */
+    --cream-bg: #FAF8F2;         /* Warm Cream Background */
+    --cream-surface: #F5F5DC;    /* Cream Surface Card Accent */
+    --sky-soft: #ADD8E6;         /* Light Blue Accent */
+    --sky-vibrant: #87CEEB;      /* Vibrant Sky Blue Accent */
+    
+    --text-primary: #1C2E2E;     /* Deep Slate Text */
+    --text-secondary: #586B6B;   /* Slate Gray Secondary */
+    --border-color: #E2DFD2;     /* Cream-Slate Border */
+    
+    /* Risk Levels */
+    --status-low: #3E7356;
+    --status-caution: #D4A338;
+    --status-elevated: #C45547;
+  }
+
+  body {
+    background-color: #FAF8F2;
+    color: #1C2E2E;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom soft civic-tech card styling with new palette */
+.card-soft {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid #E2DFD2;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(47, 79, 79, 0.06);
+}
+
+.card-soft-hover {
+  transition: all 0.2s ease-in-out;
+}
+.card-soft-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -4px rgba(47, 79, 79, 0.12);
+  border-color: #87CEEB;
+}
+
+/* Leaflet map fix */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  z-index: 10;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #ADD8E6;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #778899;
+}
