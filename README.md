@@ -1,4 +1,4 @@
-# Sahaay AI (సహాయ్ AI)
+# Sahaay AI 
 ### *"Predict. Prevent. Protect."*
 
 > **Civic Road Hazard & Urban Flood Intelligence Platform**  
